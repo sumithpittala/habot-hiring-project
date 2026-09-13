@@ -24,7 +24,7 @@ jobs:
 
       # Step 1: Detect Hardcoded Secrets / API Keys (Fail-Closed)
       - name: Secret Leak Detection (TruffleHog)
-        uses: trufflesecurity/trufflehog-action@main
+        uses: trufflesecurity/trufflehog-actions-scan@main
         with:
           extra_args: --debug --only-verified
 
