@@ -1,0 +1,27 @@
+# Web Framework & API Toolkit
+Django==4.2.11
+djangorestframework==3.15.1
+django-cors-headers==4.3.1
+
+# Database Drivers & Cloud SQL
+psycopg2-binary==2.9.9
+
+# Google Cloud Platform SDKs & Data Ingestion
+google-cloud-storage==2.16.0
+google-cloud-bigquery==3.21.0
+google-cloud-pubsub==2.21.1
+google-cloud-secret-manager==2.20.0
+django-storages[google]==1.14.3
+
+# Security, Environment & JWT Authentication
+djangorestframework-simplejwt==5.3.1
+python-dotenv==1.0.1
+cryptography==42.0.5
+
+# Code Quality, Static Security & Poka-Yoke Pipeline Checks
+black==24.4.2
+flake8==7.0.0
+bandit==1.7.8
+
+# Production WSGI Server
+gunicorn==22.0.0
