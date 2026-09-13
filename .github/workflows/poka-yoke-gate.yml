@@ -23,10 +23,14 @@ jobs:
           python-version: '3.11'
 
       # Step 1: Detect Hardcoded Secrets / API Keys (Fail-Closed)
-      - name: Secret Leak Detection (TruffleHog)
-        uses: trufflesecurity/trufflehog-actions-scan@main
+      - name: TruffleHog OSS
+        id: trufflehog
+        uses: trufflesecurity/trufflehog@main
         with:
-          extra_args: --debug --only-verified
+          path: ./
+          base: "${{ github.event.repository.default_branch }}"
+          head: HEAD
+          extra_args: --results=verified,unknown   
 
       # Step 2: Code Formatting Check (Black)
       - name: Check Code Formatting
