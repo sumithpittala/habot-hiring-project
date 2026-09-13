@@ -8,5 +8,7 @@ def evaluate_dcyn_eligibility(payload: dict) -> bool:
     requires_lsa_support = payload.get("requires_lsa") is True
 
     # Deterministic Binary Logic (DCYN)
-    is_eligible = bool(has_valid_age and has_medical_assessment and requires_lsa_support)
+    is_eligible = bool(
+        has_valid_age and has_medical_assessment and requires_lsa_support
+    )
     return is_eligible
