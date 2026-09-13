@@ -50,15 +50,12 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required to scan full commit history, not just head
+          fetch-depth: 0
 
       - name: Poka-Yoke Gate - TruffleHog Secret Scanner
-        uses: trufflesecurity/trufflehog-actions-experimental@v3.0.0
+        uses: trufflesecurity/trufflehog@main
         with:
-          path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: ${{ github.sha }}
-          extra_args: --debug --only-verified
+          extra_args: --only-verified
 
   # JOB 3: Quarantined Deployment Gate (Downstream Promotion)
   promote-and-build:
