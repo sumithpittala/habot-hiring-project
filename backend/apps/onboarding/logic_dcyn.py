@@ -1,4 +1,3 @@
-# logic_dcyn.py
 def evaluate_dcyn_eligibility(payload: dict) -> bool:
     """
     Deconstructs incoming JSON payload into binary Yes/No decisions (DCYN Library).
