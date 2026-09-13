@@ -1,6 +1,7 @@
 import uuid
+
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class StudentOnboardingRecord(models.Model):
@@ -53,7 +54,7 @@ class StudentOnboardingRecord(models.Model):
 
     class Meta:
         db_table = "student_onboarding_records"
-        ordering = ["-created_at"]
+        ordering = ("-created_at",)
         verbose_name = "Student Onboarding Record"
         verbose_name_plural = "Student Onboarding Records"
 
