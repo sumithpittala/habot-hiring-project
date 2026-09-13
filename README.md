@@ -36,6 +36,9 @@ habot-hiring-project/
 │   │       ├── serializers.py     # DRF strict field serializers
 │   │       └── logic_dcyn.py      # Binary Data/Code Yes-No (DCYN) engine
 │   └── requirements.txt           # Explicitly pinned python dependencies
+├── presentation/
+│   ├── project_presentation.pptx  # PPT explaining the project                    
+│   ├── onboarding_schema_mapping.xlsx
 └── README.md                      # System documentation
 ```
 
